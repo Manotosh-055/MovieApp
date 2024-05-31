@@ -5,15 +5,17 @@ import { useHistory } from 'react-router-dom';
 
 export const Watchlist = () => {
   const [watchlist, setWatchlist] = useState([]);
-  
   const history = useHistory();
   const user = JSON.parse(localStorage.getItem('userInfo')); 
   const id = user?._id;
 
-
+  useEffect(() => {
+    if (!user) {
+      history.push("/");
+    }
+  }, [user, history]);
 
   useEffect(() => {
-
     const allList = async () => {
       try {
         const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-list/${id}`);
@@ -21,15 +23,12 @@ export const Watchlist = () => {
       } catch (error) {
         console.log(error);
       }
-    }
+    };
 
-    
     if (user) {
       allList();
-    } else {
-      history.push("/");
     }
-  },[user, id, history]);
+  }, [id, user]);
 
   return (
     <>
