@@ -10,16 +10,20 @@ export const Watchlist = () => {
   const user = JSON.parse(localStorage.getItem('userInfo')); 
   const id = user?._id;
 
-  const allList = async () => {
-    try {
-      const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-list/${id}`);
-      setWatchlist(data); 
-    } catch (error) {
-      console.log(error);
-    }
-  }
+
 
   useEffect(() => {
+
+    const allList = async () => {
+      try {
+        const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-list/${id}`);
+        setWatchlist(data); 
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    
     if (user) {
       allList();
     } else {
