@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MovieCard } from "./MovieCard";
 import axios from "axios";
 import { useHistory } from 'react-router-dom';
@@ -6,7 +6,8 @@ import { useHistory } from 'react-router-dom';
 export const Watchlist = () => {
   const [watchlist, setWatchlist] = useState([]);
   const history = useHistory();
-  const user = JSON.parse(localStorage.getItem('userInfo')); 
+  const userRef = useRef(JSON.parse(localStorage.getItem('userInfo'))); 
+  const user = userRef.current;
   const id = user?._id;
 
   useEffect(() => {
