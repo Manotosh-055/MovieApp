@@ -25,7 +25,7 @@ export const Watchlist = () => {
     } else {
       history.push("/");
     }
-  });
+  },[user, id, history]);
 
   return (
     <>
