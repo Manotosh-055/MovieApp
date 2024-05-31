@@ -12,7 +12,7 @@ export const MovieControls = ({ type, movie }) => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/add-to-watch",
+        "https://movie-app-phi-lac.vercel.app/api/user/add-to-watch",
         {
           movieid: movie._id,
           pic: movie.pic,
@@ -38,7 +38,7 @@ export const MovieControls = ({ type, movie }) => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/remove-from-watchlist",
+        "https://movie-app-phi-lac.vercel.app/api/user/remove-from-watchlist",
         {
           movieid: id,
           userid: user._id
@@ -59,7 +59,7 @@ export const MovieControls = ({ type, movie }) => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/remove-from-watched",
+        "https://movie-app-phi-lac.vercel.app/api/user/remove-from-watched",
         {
           movieid: id,
           userid: user._id
@@ -79,7 +79,7 @@ export const MovieControls = ({ type, movie }) => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/move-to-watch",
+        "https://movie-app-phi-lac.vercel.app/api/user/move-to-watch",
         {
           movieid: movie._id,
           pic: movie.pic,

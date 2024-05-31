@@ -35,7 +35,7 @@ const Signup = () => {
                 },
             };
             const { data } = await axios.post(
-                "http://localhost:5000/api/user/register",
+                "https://movie-app-phi-lac.vercel.app/api/user/register",
                 {
                     name,
                     email,

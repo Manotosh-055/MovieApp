@@ -11,7 +11,7 @@ export const Watched = () => {
 
   const allWatchedMovie = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/user/all-watched/${id}`);
+      const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-watched/${id}`);
       setWatched(data); 
     } catch (error) {
       console.log(error);

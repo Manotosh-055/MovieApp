@@ -11,7 +11,7 @@ export const ResultCard = ({ movie }) => {
   useEffect(() => {
     const fetchWatchlist = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/user/all-list/${user._id}`);
+        const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-list/${user._id}`);
         setWatchlist(data);
 
         if (data.some(item => item.movie_name === movie.title)) {
@@ -24,7 +24,7 @@ export const ResultCard = ({ movie }) => {
 
     const fetchWatched = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/user/all-watched/${user._id}`);
+        const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-watched/${user._id}`);
         console.log(data);
         if (data.some(item => item.movie_name === movie.title)) {
           setWatchlistDisabled(true); 
@@ -48,7 +48,7 @@ export const ResultCard = ({ movie }) => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/add-watch",
+        "https://movie-app-phi-lac.vercel.app/api/user/add-watch",
         {
           pic: `https://image.tmdb.org/t/p/w200${movie.poster_path}`,
           moviename: movie.title,
@@ -75,7 +75,7 @@ export const ResultCard = ({ movie }) => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/add-movie",
+        "https://movie-app-phi-lac.vercel.app/api/user/add-movie",
         {
           pic: `https://image.tmdb.org/t/p/w200${movie.poster_path}`,
           moviename: movie.title,

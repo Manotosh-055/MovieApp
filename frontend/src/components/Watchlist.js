@@ -12,7 +12,7 @@ export const Watchlist = () => {
 
   const allList = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/user/all-list/${id}`);
+      const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-list/${id}`);
       setWatchlist(data); 
     } catch (error) {
       console.log(error);

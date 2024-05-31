@@ -31,7 +31,7 @@ const Login = () => {
                 },
             };
             const { data } = await axios.post(
-                "http://localhost:5000/api/user/login",
+                "https://movie-app-phi-lac.vercel.app/api/user/login",
                 {
                     email,
                     password,
