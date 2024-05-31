@@ -37,7 +37,7 @@ export const ResultCard = ({ movie }) => {
 
     fetchWatchlist();
     fetchWatched();
-  }, [user._id, movie.title]);
+  });
 
   const addMovieToWatched = async(movie) => {
     console.log(movie);
