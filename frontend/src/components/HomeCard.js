@@ -11,7 +11,7 @@ export const HomeCard = ({ movie }) => {
   useEffect(() => {
     const fetchWatchlist = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/user/all-list/${user._id}`);
+        const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-list/${user._id}`);
         setWatchlist(data);
 
         if (data.some(item => item.movie_name === movie.title)) {
@@ -24,7 +24,7 @@ export const HomeCard = ({ movie }) => {
 
     const fetchWatched = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/user/all-watched/${user._id}`);
+        const { data } = await axios.get(`https://movie-app-phi-lac.vercel.app/api/user/all-watched/${user._id}`);
         console.log(data);
         if (data.some(item => item.movie_name === movie.title)) {
           setWatchlistDisabled(true); 
