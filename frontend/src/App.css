@@ -410,3 +410,54 @@ header .nav-links li:last-child {
 }
 
 /*auth login page end*/
+
+/* Home card */
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 10px;
+}
+
+.home-card-container {
+  max-width: 200px;
+  height: 480px;
+}
+
+.movie-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #777;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-release-date {
+  font-size: 20px;
+}
+
+.movie-poster {
+  height: 300px;
+  width: 200px;
+}
+
+.movie-header {
+  margin: 10px 0px;
+  height: 60px;
+}
+
+.movie-controls {
+  display: flex;
+  flex-direction: column;
+}

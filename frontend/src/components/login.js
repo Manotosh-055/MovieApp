@@ -41,7 +41,7 @@ const Login = () => {
             localStorage.setItem("userInfo", JSON.stringify(data));
             toast.success(`Login Successful`);
             setTimeout(() => {
-                history.push("/watchlist");
+                history.push("/home");
                 window.location.reload();
             }, 500);
         } catch (error) {

@@ -22,10 +22,13 @@ const logout = () => {
       <div className="container">
         <div className="inner-content">
           <div className="brand">
-            <Link to="/watchlist">MovieMania</Link>
+            <Link to="/home">MovieMania</Link>
           </div>
 
           <ul className="nav-links">
+          <li>
+              <Link to="/home">Home</Link>
+            </li>
             <li>
               <Link to="/watchlist">Watch List</Link>
             </li>

@@ -10,6 +10,7 @@ import "./lib/font-awesome/css/all.min.css";
 import { GlobalProvider } from "./context/GlobalState";
 import Login from "./components/login";
 import Signup from "./components/signup";
+import { Home } from "./components/Home";
 
 
 
@@ -23,6 +24,9 @@ function App() {
                 <Switch>
                     <Route exact path="/">
                         <Login />
+                    </Route>
+                    <Route path="/home">
+                        <Home />
                     </Route>
                     <Route path="/watchlist">
                         <Watchlist />
